@@ -417,7 +417,9 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="c9017b41-5b29-4aa0-8972-11a69de77240">
+                    <input type="hidden" name="redirect" value="https://christineportfolio-self.vercel.app/#contact">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                     </div>

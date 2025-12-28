@@ -69,25 +69,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Contact form handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
         
-        // Create mailto link
-        const mailtoLink = `mailto:christinenamatovu972@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+            });
+            
+            if (response.ok) {
+                alert('Message sent successfully! I will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            alert('Something went wrong. Please try again.');
+        }
         
-        window.location.href = mailtoLink;
-        
-        // Reset form
-        contactForm.reset();
-        
-        alert('Opening your email client...');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
     });
 }
 
