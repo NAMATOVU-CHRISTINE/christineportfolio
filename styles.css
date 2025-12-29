@@ -1059,3 +1059,13 @@ img[loading] {
 .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
 .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
 .hero-content > *:nth-child(6) { animation-delay: 0.6s; }
+
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
