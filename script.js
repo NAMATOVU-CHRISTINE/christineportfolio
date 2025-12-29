@@ -180,3 +180,19 @@ document.addEventListener('mousemove', (e) => {
     document.body.appendChild(cursor);
     setTimeout(() => cursor.remove(), 500);
 });
+
+
+// Counter animation for stats
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 50;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 30);
+}
