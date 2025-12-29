@@ -934,3 +934,16 @@ section {
 .skill-category:hover {
     box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
 }
+
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.name {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+}
