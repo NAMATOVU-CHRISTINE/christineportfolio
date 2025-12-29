@@ -1077,3 +1077,24 @@ img[loading] {
         background-color: var(--bg-dark);
     }
 }
+
+
+/* Cursor trail styling */
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: fadeOut 0.5s ease forwards;
+    z-index: 9998;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
