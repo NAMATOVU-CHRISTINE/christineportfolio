@@ -994,3 +994,13 @@ img[loading] {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+
+/* Contact item slide effect */
+.contact-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
