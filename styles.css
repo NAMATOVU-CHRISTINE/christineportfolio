@@ -1069,3 +1069,11 @@ img[loading] {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Dark mode improvements */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-dark);
+    }
+}
