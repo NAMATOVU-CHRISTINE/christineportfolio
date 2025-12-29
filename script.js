@@ -169,3 +169,14 @@ window.addEventListener('scroll', () => {
         hero.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
 });
+
+
+// Cursor trail effect
+document.addEventListener('mousemove', (e) => {
+    const cursor = document.createElement('div');
+    cursor.className = 'cursor-trail';
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+    document.body.appendChild(cursor);
+    setTimeout(() => cursor.remove(), 500);
+});
