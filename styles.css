@@ -987,3 +987,10 @@ img[loading] {
         transform: translateX(0);
     }
 }
+
+
+/* Skill tag hover scale */
+.skill-tag {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
