@@ -924,3 +924,13 @@ section {
 .btn-primary:hover {
     animation: pulse 1.5s infinite;
 }
+
+
+/* Glow effect for cards */
+.project-card:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.skill-category:hover {
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+}
