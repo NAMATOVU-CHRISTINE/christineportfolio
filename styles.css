@@ -879,3 +879,15 @@ section {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-dark);
 }
+
+
+/* Selection styling */
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--primary);
+    color: white;
+}
