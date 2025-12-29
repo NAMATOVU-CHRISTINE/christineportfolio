@@ -1025,3 +1025,13 @@ img[loading] {
 .footer-links a:hover {
     transform: translateY(-3px);
 }
+
+
+/* Section title underline animation */
+.section-title::after {
+    transition: width 0.5s ease;
+}
+
+.section-title:hover::after {
+    width: 120px;
+}
