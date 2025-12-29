@@ -965,3 +965,10 @@ img {
 img[loading] {
     opacity: 0;
 }
+
+
+/* Card tilt effect */
+.project-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
