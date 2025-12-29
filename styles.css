@@ -1015,3 +1015,13 @@ img[loading] {
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(139, 92, 246, 0.2);
 }
+
+
+/* Footer link hover */
+.footer-links a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a:hover {
+    transform: translateY(-3px);
+}
