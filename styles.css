@@ -954,3 +954,14 @@ a:focus, button:focus, input:focus, textarea:focus {
     outline: 2px solid var(--primary);
     outline-offset: 3px;
 }
+
+
+/* Smooth image loading */
+img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+img[loading] {
+    opacity: 0;
+}
