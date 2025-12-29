@@ -1035,3 +1035,13 @@ img[loading] {
 .section-title:hover::after {
     width: 120px;
 }
+
+
+/* Navigation link active state */
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
